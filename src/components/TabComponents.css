@@ -1,0 +1,128 @@
+
+h1 {
+    color: black;
+  margin: 0;
+  font-size: 36px;
+}
+p {
+    color: black;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #e5e5e5;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+.input {
+  position: absolute;
+  opacity: 0;
+}
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+.label:hover {
+  background: #d8d8d8;
+}
+.label:active {
+  background: #ccc;
+}
+.input:focus + .label {
+  z-index: 1;
+}
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+.panel {
+  display: none;
+  background: #fff;
+}
+.panel__textarea{
+    width: 700px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textarea__button{
+  padding: 5px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.panel__form {
+  border: 2px solid #000;
+  width: 700px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__title{
+  margin-bottom: 10px;
+  display: block;
+  color: #000;
+  font-size: 20px;
+}
+.form__container{
+  border: '2px solid red';
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.form__container-wrong{
+  color: #FF0000
+}
+.form__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ 
+}
+.form__label{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.form__buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.form__button{
+  padding: 5px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  
+}
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+.input:checked + .label + .panel {
+  display: block;
+}
